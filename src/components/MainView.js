@@ -36,7 +36,7 @@ class MainView extends React.Component {
                         variant="contained" 
                         color="primary" 
                         className="gif-container__button"
-                    >Load More Gifs</Button>                
+                    >Load More Trending Gifs</Button>                
                 </section>
                
                 {/* <button onClick={this.props.onClick}>load more</button> */}

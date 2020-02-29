@@ -5,6 +5,7 @@ import { animateScroll as scroll } from 'react-scroll'
 
 import '../styles/App/main.css'
 import MainView from './MainView'
+import ToolBar from './ToolBar'
 
 class App extends React.Component {
 
@@ -17,18 +18,9 @@ class App extends React.Component {
       }
     }
 
-  // state = {
-  //   trendingGifs: [],
-  //   errorMessage: '',
-  //   limit: 6
-  // }
-
   PUBLIC_KEY = '&api_key=MUeAc7ULK6t3nVn3qAxuoakuOvD1U6L0';
   BASE_URL = 'https://api.giphy.com/v1/gifs/trending?';
   ENDPOINT = 'search';
-  // LIMIT = '&limit=6';
-  // LIMIT = 6;
-  // ${BASE_URL}${ENDPOINT}?q=${this.text}&limit=${LIMIT}&rating=${RATING}&offset=${this.offset}&api_key=${PUBLIC_KEY}
 
 
   componentDidMount() {
@@ -62,6 +54,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <ToolBar></ToolBar>
         <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore}></MainView>
       </div>
     );
