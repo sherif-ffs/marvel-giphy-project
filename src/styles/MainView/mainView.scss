@@ -1,15 +1,26 @@
 @import '../variables/variables.scss';
 
-.gif-container {
+
+.main-view {
     width: 75%;
     margin-left: 12.5%;
-    margin-top: 15vh;
+    margin-top: 25vh;
+    flex-direction: column;
+}
+.gif-container {
+    width: 100%;
+    // margin-left: 12.5%;
+    // margin-top: 15vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 50px;
     // border: 1px solid red;
 }
+
+// important flag to override material-ui defaults
 .gif-container__button {
-    margin-left: 10%;
-    border: 1px solid red;
+    margin-left: 15px!important;
+    margin-top: -25vh!important;
+    padding: 10px 25px!important;
 }

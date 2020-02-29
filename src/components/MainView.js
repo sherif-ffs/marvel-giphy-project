@@ -27,8 +27,18 @@ class MainView extends React.Component {
 
         return(
             <React.Fragment>
-                <div className="gif-container">{trendingGifs}</div>
-                <Button onClick={this.props.onClick} variant="contained" color="primary" className="gif-container__button">Load More Tasks</Button>
+                <section className="main-view">
+                    <div className="gif-container">
+                        {trendingGifs}
+                    </div>
+                    <Button 
+                        onClick={this.props.onClick} 
+                        variant="contained" 
+                        color="primary" 
+                        className="gif-container__button"
+                    >Load More Gifs</Button>                
+                </section>
+               
                 {/* <button onClick={this.props.onClick}>load more</button> */}
             </React.Fragment>
         ) 
