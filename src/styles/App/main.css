@@ -19,4 +19,18 @@ body {
   background-color: whitesmoke;
 }
 
+#nprogress .bar {
+  background: #3f51b5 !important;
+  height: 1vh;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #3f51b5, 0 0 5px #3f51b5 !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: #3f51b5 !important;
+  border-left-color: #3f51b5 !important;
+}
+
 /*# sourceMappingURL=main.css.map */

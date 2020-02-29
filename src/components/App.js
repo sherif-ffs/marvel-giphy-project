@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-// import * as Scroll from 'react-scroll';
+import 'axios-progress-bar/dist/nprogress.css'
+import { loadProgressBar } from 'axios-progress-bar'
+
 import { animateScroll as scroll } from 'react-scroll'
 
 import '../styles/App/main.css'
@@ -43,18 +45,20 @@ class App extends React.Component {
        axios.get(`${this.BASE_URL}${this.PUBLIC_KEY}&limit=${this.state.limit}`)
       .then(response => {
         if (response.data !== 'undefined') {
+          loadProgressBar()
           this.setState({ trendingGifs: response.data});
         }
       }).catch (error => {
         this.setState({ errorMessage: error.message });
       });
   }
-  
+
   render() {
 
     return (
       <div className="App">
-        <ToolBar></ToolBar>
+        {/* <Progress></Progress> */}
+        <ToolBar onClick={this.move}></ToolBar>
         <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore}></MainView>
       </div>
     );

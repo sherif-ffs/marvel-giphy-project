@@ -25,15 +25,15 @@
     font-weight: 700;
     margin-right: 20px;
 }
+
 .tool-bar__item.search {
-   flex: 1;
-   height: 100%;
-   margin-left: 20px;
-    //    color: $body-color-faded;
-    color: red!important;
-}
-.tool-bar__item.button {
     flex: 1;
     height: 100%;
-    margin-left: 30px;
-}
+    margin-left: 20px;
+ }
+ 
+ .tool-bar__item.button {
+     flex: 1;
+     height: 100%;
+     margin-left: 30px;
+ }
