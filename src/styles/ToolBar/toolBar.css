@@ -1,0 +1,39 @@
+.tool-bar {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 40px;
+  margin-left: 18%;
+  margin-top: 8vh;
+}
+
+.tool-bar__item {
+  display: flex;
+  flex: 1;
+}
+
+.tool-bar__item.title {
+  font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
+  color: #333648;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.tool-bar__item.search {
+  flex: 1;
+  height: 100%;
+  margin-left: 20px;
+  color: red !important;
+}
+
+.tool-bar__item.button {
+  flex: 1;
+  height: 100%;
+  margin-left: 30px;
+}
+
+/*# sourceMappingURL=toolBar.css.map */
