@@ -38,8 +38,6 @@ class MainView extends React.Component {
                         className="gif-container__button"
                     >Load More Trending Gifs</Button>                
                 </section>
-               
-                {/* <button onClick={this.props.onClick}>load more</button> */}
             </React.Fragment>
         ) 
     }
