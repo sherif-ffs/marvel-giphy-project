@@ -2,10 +2,22 @@ import React from 'react';
 
 import { motion } from "framer-motion";
 
-import styled from 'styled-components';
 import '../styles/Gif/gif.css'
 
 class Gif extends React.Component {
+
+    gifIsPaused = true
+
+    // function to pause gifs because epilepsy
+    pauseGif(e) {
+        if (this.gifIsPaused === true) {
+            e.target.src = this.props.activeUrl;
+            this.gifIsPaused = false;
+        } else {
+            e.target.src = this.props.stillUrl;
+            this.gifIsPaused = true
+        }
+    };
 
     render() {
         console.log('this.props; ', this.props)
@@ -15,18 +27,19 @@ class Gif extends React.Component {
                 >
                 <motion.div 
                     className="gif-img-wrapper"
-                    whileHover={{ scale: 1, rotate: 2 }}
-                    whileTap={{
-                        scale: 0.9,
-                        rotate: -3,
-                    }}
+                    whileHover={{ scale: .95, rotate: 2 }}
                     style={
                         {
                             background: `${this.props.activeUrl ? this.props.activeUrl : '#f5f5f5'}`
                         }
                     }
                 >
-                    <img src={this.props.activeUrl} alt="gif" className="gif-wrapper__image"></img>
+                    <img 
+                        src={this.props.stillUrl} 
+                        alt="gif" 
+                        className="gif-wrapper__image"
+                        onClick={e => this.pauseGif(e)}
+                        ></img>
                 </motion.div>
                 <h1 className="gif-wrapper__title">{this.props.title}</h1>
             </div>
