@@ -17,7 +17,7 @@ export default class ToolBar extends React.Component{
         return (
             <React.Fragment>
             <section className="tool-bar">
-                <h1 className="tool-bar__item title">Giphy API 🔥</h1>
+                <h1 className="tool-bar__item title">Trending Gifs 🔥</h1>
                 <SearchBar 
                     className="tool-bar__item search"
                     placeholder="Search giphy..."

@@ -8,14 +8,14 @@ import '../styles/MainView/mainView.css'
 
 
 const container = {
-    hidden: { opacity: 1, scale: .8 },
+    hidden: { opacity: 1, scale: .9 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: 0.3,
+        delay: 0.5,
         when: "beforeChildren",
-        staggerChildren: 0.1
+        staggerChildren: 0.5
       }
     }
   };
@@ -25,7 +25,7 @@ const container = {
     visible: {
       y: 0,
       opacity: 1
-    }
+    },
   };
 
 class MainView extends React.Component {
@@ -48,6 +48,7 @@ class MainView extends React.Component {
                             variants={item}
                             title={gif.title}
                             activeUrl={gif.images.original.webp}
+                            stillUrl={gif.images.fixed_height_still.url}
                         >
                         </Gif>
                     )
