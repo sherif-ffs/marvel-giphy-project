@@ -13,7 +13,7 @@ export default class ToolBar extends React.Component{
 
     render() {
         const {handleGifSearch, resetGifs} = this.props
-        // console.log('searchGif: ', searchGif)
+        console.log('this.props: ', this.props)
 
         return (
             <React.Fragment>
@@ -31,7 +31,7 @@ export default class ToolBar extends React.Component{
                 variant="contained" 
                 color="primary" 
                 onClick={resetGifs}
-                >RESET
+                >RESET Gifs
             </Button>
             </section>
             

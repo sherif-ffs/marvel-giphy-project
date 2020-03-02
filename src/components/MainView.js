@@ -7,6 +7,7 @@ import '../styles/MainView/mainView.css'
 class MainView extends React.Component {
 
     render() {
+        console.log('this.props: ', this.props)
         let gifs = this.props.trendingGifs
 
         let trendingGifs;
@@ -36,7 +37,9 @@ class MainView extends React.Component {
                         variant="contained" 
                         color="primary" 
                         className="gif-container__button"
-                    >Load More Trending Gifs</Button>                
+                    >
+                    Load More Gifs
+                    </Button>                
                 </section>
             </React.Fragment>
         ) 
