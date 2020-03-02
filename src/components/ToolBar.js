@@ -13,12 +13,11 @@ export default class ToolBar extends React.Component{
 
     render() {
         const {handleGifSearch, resetGifs} = this.props
-        console.log('this.props: ', this.props)
 
         return (
             <React.Fragment>
             <section className="tool-bar">
-                <h1 className="tool-bar__item title">Trending Gifs 🔥</h1>
+                <h1 className="tool-bar__item title">Giphy API 🔥</h1>
                 <SearchBar 
                     className="tool-bar__item search"
                     placeholder="Search giphy..."
@@ -40,4 +39,3 @@ export default class ToolBar extends React.Component{
     }
 }
 
-// export default ToolBar

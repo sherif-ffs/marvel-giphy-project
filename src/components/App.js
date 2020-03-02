@@ -8,7 +8,6 @@ import { animateScroll as scroll } from 'react-scroll'
 import '../styles/App/main.css'
 import MainView from './MainView'
 import ToolBar from './ToolBar'
-import { thisExpression } from '@babel/types';
 
 class App extends React.Component {
 
@@ -47,12 +46,8 @@ class App extends React.Component {
 
   handleGifSearch = (searchInput) => {
     if (searchInput.length > 0) {
-      console.log('this.LIMIT: ', this.LIMIT) 
       this.SEARCHINPUT = searchInput
       const url = `http://api.giphy.com/v1/gifs/search?q=${searchInput.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`;
-      // this.setState({ searchInput: searchInput }, () => {
-      //   console.log("this.state", this.state);
-      // });     
       this.getGifsBySearch(url)
     } else {
         this.getTrendingGifs()
@@ -65,10 +60,6 @@ class App extends React.Component {
 
   loadMore = () => {
     scroll.scrollToBottom();
-    // this.setState({
-    //   ...this.state,
-    //   limit: this.state.limit += 3
-    // })
     this.LIMIT += 3
     if (!this.getBySearch) {
       this.getTrendingGifs()
@@ -92,7 +83,6 @@ class App extends React.Component {
   }
 
   getGifsBySearch(url) {
-    console.log('this.LIMIT: ', this.LIMIT) 
     axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.SEARCHINPUT.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`)
       .then(response => {
         if (response.data !== 'undefined') {
