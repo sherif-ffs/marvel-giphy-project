@@ -21,13 +21,13 @@
     background-color: $background-color;
   }
 
-  #nprogress .bar {
-    background: $blue !important;
-    height: 1vh;
+#nprogress .bar {
+    background: $blue!important;
+    height: 100vh;
 }
 
 #nprogress .peg {
-    box-shadow: 0 0 10px $blue, 0 0 5px $blue !important;
+    box-shadow: 0 0 50px $blue, 0 0 50px $blue !important;
 }
 
 #nprogress .spinner-icon {

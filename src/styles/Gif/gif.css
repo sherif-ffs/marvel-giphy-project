@@ -8,11 +8,22 @@
   margin-top: -5vh;
 }
 
-.gif-wrapper__image {
+.gif-img-wrapper {
   height: 70% !important;
   width: 100%;
   border-radius: 5px;
   box-shadow: 0px 1px 10px rgba(34, 34, 34, 0.3);
+}
+.gif-img-wrapper:hover {
+  transition: 0.5s;
+  box-shadow: 0px 3px 10px rgba(34, 34, 34, 0.4);
+  cursor: pointer;
+}
+
+.gif-wrapper__image {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
 }
 .gif-wrapper__image:hover {
   transition: 0.5s;

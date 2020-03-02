@@ -21,11 +21,11 @@ body {
 
 #nprogress .bar {
   background: #3f51b5 !important;
-  height: 1vh;
+  height: 100vh;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #3f51b5, 0 0 5px #3f51b5 !important;
+  box-shadow: 0 0 50px #3f51b5, 0 0 50px #3f51b5 !important;
 }
 
 #nprogress .spinner-icon {
