@@ -12,10 +12,18 @@
   flex: 1;
 }
 
+.tool-bar-titles-container {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  flex-direction: column;
+  font-weight: 700;
+}
+
 .tool-bar__item.title {
   font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
   color: #333648;
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin: 0;
   padding: 0;
   flex: 1;
