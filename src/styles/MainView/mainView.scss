@@ -1,5 +1,17 @@
 @import '../variables/variables.scss';
 
+
+.search-results {
+    font-family: $body-font;
+    color: $body-color;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7vh;
+    margin-top: -6vh;
+    margin-left: 2.5%;
+}
+
 .main-view {
     width: 75%;
     margin-left: 12.5%;

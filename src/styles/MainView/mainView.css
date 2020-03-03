@@ -1,3 +1,14 @@
+.search-results {
+  font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
+  color: #333648;
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7vh;
+  margin-top: -6vh;
+  margin-left: 2.5%;
+}
+
 .main-view {
   width: 75%;
   margin-left: 12.5%;
