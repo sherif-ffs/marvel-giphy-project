@@ -53,7 +53,7 @@ class App extends React.Component {
       const url = `http://api.giphy.com/v1/gifs/search?q=${searchInput.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`;
       this.getGifsBySearch(url)
     } else {
-        this.getTrendingGifs()
+        this.resetGifs()
     }
   }
 
@@ -112,7 +112,7 @@ class App extends React.Component {
           searchInput={this.SEARCHINPUT}
           >
         </ToolBar>
-        <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore} searchInpu={this.SEARCHINPUT}></MainView>
+        <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore} searchInput={this.SEARCHINPUT}></MainView>
       </div>
     );
   }

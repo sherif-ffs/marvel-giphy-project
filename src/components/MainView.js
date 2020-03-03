@@ -3,7 +3,6 @@ import React from 'react';
 import Gif from './Gif';
 import { motion } from "framer-motion";
 import Button from '@material-ui/core/Button';
-
 import '../styles/MainView/mainView.css'
 
 
@@ -37,6 +36,7 @@ class MainView extends React.Component {
     render() {
         let gifs = this.props.trendingGifs
         console.log('this.props: ', this.props)
+        console.log('this.props.searchInput: ', this.props.searchInput)
         let trendingGifs;
 
         if (typeof gifs !== 'undefined') {
@@ -58,6 +58,12 @@ class MainView extends React.Component {
         return(
             <React.Fragment>
                 <section className="main-view">
+                    {/* <SearchResult></SearchResult> */}
+                    {/* <h1 className="search-results">trending results 🔥</h1> */}
+                    <h1 className="search-results">{this.props.searchInput.length > 0 
+                        ? `Search Results for "${this.props.searchInput}" 🤔` 
+                        : 'Trending Gifs 🔥' }
+                    </h1>
                     <motion.div 
                         className="container"
                         variants={container}
