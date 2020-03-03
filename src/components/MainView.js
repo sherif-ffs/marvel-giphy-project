@@ -36,7 +36,7 @@ class MainView extends React.Component {
 
     render() {
         let gifs = this.props.trendingGifs
-
+        console.log('this.props: ', this.props)
         let trendingGifs;
 
         if (typeof gifs !== 'undefined') {

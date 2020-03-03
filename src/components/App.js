@@ -33,9 +33,12 @@ class App extends React.Component {
         if (response.data !== 'undefined') {
           loadProgressBar()
           this.LIMIT = 3;
+          this.SEARCHINPUT = '';
+          document.querySelector('.search').value = '';
           this.setState({ 
             trendingGifs: response.data,
             limit: 3,
+            searchInput: ''
           });
           this.getBySearch = false;
         }
@@ -109,7 +112,7 @@ class App extends React.Component {
           searchInput={this.SEARCHINPUT}
           >
         </ToolBar>
-        <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore}></MainView>
+        <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore} searchInpu={this.SEARCHINPUT}></MainView>
       </div>
     );
   }
