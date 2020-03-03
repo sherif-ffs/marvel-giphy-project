@@ -6,7 +6,7 @@ import '../styles/Gif/gif.css'
 
 class Gif extends React.Component {
 
-    gifIsPaused = true
+    gifIsPaused = false
 
     // function to pause gifs because epilepsy
     pauseGif(e) {
@@ -27,7 +27,11 @@ class Gif extends React.Component {
                 >
                 <motion.div 
                     className="gif-img-wrapper"
-                    whileHover={{ scale: .95, rotate: 2 }}
+                    whileHover={{ scale: .99, rotate: 1 }}
+                    whileTap={{
+                        scale: 0.95,
+                        rotate: -2,
+                    }}
                     style={
                         {
                             background: `${this.props.activeUrl ? this.props.activeUrl : '#f5f5f5'}`
@@ -35,7 +39,7 @@ class Gif extends React.Component {
                     }
                 >
                     <img 
-                        src={this.props.stillUrl} 
+                        src={this.props.activeUrl} 
                         alt="gif" 
                         className="gif-wrapper__image"
                         onClick={e => this.pauseGif(e)}
