@@ -29,6 +29,7 @@ const container = {
 
 class MainView extends React.Component {
 
+    // option for users to scroll back to top to improve UX
     scrollToTop = () => {
         window.scrollTo(0,0);
     }
@@ -58,8 +59,7 @@ class MainView extends React.Component {
         return(
             <React.Fragment>
                 <section className="main-view">
-                    {/* <SearchResult></SearchResult> */}
-                    {/* <h1 className="search-results">trending results 🔥</h1> */}
+                    {/* update text based on whether text is showing search results or trending gifs */}
                     <h1 className="search-results">{this.props.searchInput.length > 0 
                         ? `Search Results for "${this.props.searchInput}" 🤔` 
                         : 'Trending Gifs 🔥' }
