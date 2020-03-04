@@ -50,7 +50,7 @@ class App extends React.Component {
   handleGifSearch = (searchInput) => {
     if (searchInput.length > 0) {
       this.SEARCHINPUT = searchInput
-      const url = `http://api.giphy.com/v1/gifs/search?q=${searchInput.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`;
+      const url = `https://api.giphy.com/v1/gifs/search?q=${searchInput.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`;
       this.getGifsBySearch(url)
     } else {
         this.resetGifs()
@@ -105,11 +105,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <ToolBar 
-          onClick={this.move} 
-          handleGifSearch={search => this.handleGifSearch(search)} 
-          resetGifs={this.resetGifs}
-          searchedGifs={this.getBySearch} 
-          searchInput={this.SEARCHINPUT}
+            onClick={this.move} 
+            handleGifSearch={search => this.handleGifSearch(search)} 
+            resetGifs={this.resetGifs}
+            searchedGifs={this.getBySearch} 
+            searchInput={this.SEARCHINPUT}
           >
         </ToolBar>
         <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore} searchInput={this.SEARCHINPUT}></MainView>
