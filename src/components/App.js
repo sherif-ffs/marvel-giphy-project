@@ -86,7 +86,7 @@ class App extends React.Component {
   }
 
   getGifsBySearch(url) {
-    axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.SEARCHINPUT.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?q=${this.SEARCHINPUT.replace(/\s/g, '+')}${this.PUBLIC_KEY}&limit=${this.LIMIT}`)
       .then(response => {
         if (response.data !== 'undefined') {
           loadProgressBar()
