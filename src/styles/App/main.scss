@@ -21,6 +21,7 @@
     background-color: $background-color;
   }
 
+// style axios loading bar
 #nprogress .bar {
     background: $blue!important;
     height: 1vh;
@@ -29,7 +30,6 @@
 #nprogress .peg {
     box-shadow: 0 0 50px $blue, 0 0 50px $blue !important;
 }
-
 #nprogress .spinner-icon {
     border-top-color: $blue !important;
     border-left-color: $blue !important;
