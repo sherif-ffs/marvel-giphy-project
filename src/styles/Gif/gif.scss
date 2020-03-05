@@ -32,3 +32,13 @@
     font-weight: 600;
     text-align: left;
 }
+
+@media (max-width: $breakpoint-phone) {
+    .gif-wrapper  {
+        flex-direction: column;
+        width: 100%;
+   }
+   .gif-wrapper__title {
+       font-size: 1.3rem;
+   }
+}

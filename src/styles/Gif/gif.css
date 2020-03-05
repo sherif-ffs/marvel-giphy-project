@@ -34,4 +34,15 @@
   text-align: left;
 }
 
+@media (max-width: 420px) {
+  .gif-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .gif-wrapper__title {
+    font-size: 1.3rem;
+  }
+}
+
 /*# sourceMappingURL=gif.css.map */

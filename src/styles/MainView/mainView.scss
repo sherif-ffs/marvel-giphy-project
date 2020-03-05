@@ -31,3 +31,37 @@
     margin-top: -25vh!important;
     padding: 10px 25px!important;
 }
+
+// Mobile styles
+@media (max-width: $breakpoint-phone) {
+
+    .search-results {
+        font-family: $body-font;
+        color: $body-color;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 7vh;
+        margin-top: 1vh;
+        margin-left: 5%;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .main-view {
+        width: 90%;
+        margin-left: .5%;
+        margin-top: 12.5vh;
+        flex-direction: column;
+    }
+    .gif-container__button {
+        margin-left: 5%!important;
+        width: 95%;
+        margin-top: -25vh!important;
+        padding: 10px 25px!important;
+    }
+    // i dont know why this works but it does
+    .return-to-top {
+        margin-top: -15vh!important;
+    }
+}
