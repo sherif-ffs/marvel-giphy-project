@@ -9,9 +9,9 @@
 ### To Run Locally
 Make sure the latest versions of npm and react are installed.
 
-####### Clone or download the repository
-####### To clone: Copy the URL from the green button
-####### Open the terminal on your computer and type git clone URL, replacing URL with the copied URL
-####### cd to the directory you just cloned/downloaded the repo to
-####### Run command npm install to install dependencies
-####### Run command npm start
+###### Clone or download the repository
+###### To clone: Copy the URL from the green button
+###### Open the terminal on your computer and type git clone URL, replacing URL with the copied URL
+###### cd to the directory you just cloned/downloaded the repo to
+###### Run command npm install to install dependencies
+###### Run command npm start
