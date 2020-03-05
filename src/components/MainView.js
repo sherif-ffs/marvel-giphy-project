@@ -99,7 +99,7 @@ class MainView extends React.Component {
                         onClick={this.scrollToTop} 
                         variant="contained" 
                         color="secondary" 
-                        className="gif-container__button"
+                        className="gif-container__button return-to-top"
                     >
                     Back to top
                     </Button>          
