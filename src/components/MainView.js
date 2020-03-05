@@ -35,7 +35,9 @@ class MainView extends React.Component {
     }
 
     render() {
-        let gifs = this.props.trendingGifs
+        let gifs = this.props.trendingGifs;
+        let limit = this.props.limit;
+
         console.log('this.props: ', this.props)
         console.log('this.props.searchInput: ', this.props.searchInput)
         let trendingGifs;
@@ -55,9 +57,22 @@ class MainView extends React.Component {
                     )
             })
         }
-        
-        return(
-            <React.Fragment>
+        // return message if there are no results returned
+        if (typeof gifs !== 'undefined') {
+            if (gifs.length === 0) {
+                return (
+                    <React.Fragment>
+                        <section className="main-view">
+                            <h1 className="search-results">{`No results returned for ${this.props.searchInput} 😭`}</h1>
+                        </section>>
+                    </React.Fragment>
+                )
+            }
+        }
+        // if limit is more than 3 render button to scroll back to the top
+        if (limit > 3 ) {
+            return (
+                <React.Fragment>
                 <section className="main-view">
                     {/* update text based on whether text is showing search results or trending gifs */}
                     <h1 className="search-results">{this.props.searchInput.length > 0 
@@ -90,7 +105,39 @@ class MainView extends React.Component {
                     </Button>          
                 </section>
             </React.Fragment>
-        ) 
+            )
+        } 
+        // if there are not more that 3 items dont render button to scroll back to the top
+        else {
+            return(
+                <React.Fragment>
+                    <section className="main-view">
+                        {/* update text based on whether text is showing search results or trending gifs */}
+                        <h1 className="search-results">{this.props.searchInput.length > 0 
+                            ? `Search Results for "${this.props.searchInput}" 🤔` 
+                            : 'Trending Gifs 🔥' }
+                        </h1>
+                        <motion.div 
+                            className="container"
+                            variants={container}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            {trendingGifs}
+                        </motion.div>
+                        <Button 
+                            onClick={this.props.onClick} 
+                            variant="contained" 
+                            color="primary" 
+                            className="gif-container__button"
+                        >
+                        Load More Gifs
+                        </Button>
+                    </section>
+                </React.Fragment>
+            )
+        }
+         
     }
 }
 

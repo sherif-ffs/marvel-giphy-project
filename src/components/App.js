@@ -120,7 +120,13 @@ class App extends React.Component {
             searchInput={this.SEARCHINPUT}
           >
         </ToolBar>
-        <MainView trendingGifs={this.state.trendingGifs.data} onClick={this.loadMore} searchInput={this.SEARCHINPUT}></MainView>
+        <MainView 
+          trendingGifs={this.state.trendingGifs.data} 
+          onClick={this.loadMore} 
+          searchInput={this.SEARCHINPUT}
+          limit={this.LIMIT}
+        >
+        </MainView>
       </div>
     );
   }
